@@ -115,8 +115,9 @@ namespace docDynamicFooterSummaries {
             // (at the end of the report).
             gr.Modifier = BrickModifier.ReportFooter;
             gr.BackColor = SystemColors.ControlDark;
-            gr.Font = new Font("Arial", 10, FontStyle.Bold);
-            h = gr.Font.Height;
+            var font = new Font("Arial", 10, FontStyle.Bold);
+            gr.Font = font;
+            h = font.Height;
             gr.DrawString(String.Format("{0:0.##}", count), Color.White,
                 new RectangleF(0, 0, X, h), BorderSide.All);
             gr.DrawString(String.Format("{0:0.##}", sum), Color.White,

@@ -112,8 +112,9 @@ Namespace docDynamicFooterSummaries
 			' (at the end of the report).
 			gr.Modifier = BrickModifier.ReportFooter
 			gr.BackColor = SystemColors.ControlDark
-			gr.Font = New Font("Arial", 10, FontStyle.Bold)
-			h = gr.Font.Height
+			Dim font As New Font("Arial", 10, FontStyle.Bold)
+			gr.Font = font
+			h = font.Height
 			gr.DrawString(String.Format("{0:0.##}", count), Color.White, New RectangleF(0, 0, X, h), BorderSide.All)
 			gr.DrawString(String.Format("{0:0.##}", sum), Color.White, New RectangleF(X, 0, X, h), BorderSide.All)
 
