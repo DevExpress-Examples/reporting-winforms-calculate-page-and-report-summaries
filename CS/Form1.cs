@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using DevExpress.Drawing.Printing;
 using DevExpress.XtraPrinting;
 // ...
 
@@ -53,7 +54,7 @@ namespace docDynamicFooterSummaries {
         private void button1_Click(object sender, EventArgs e) {
             CreateDocument();
             ps.PageSettings.Assign(new Margins(15, 15, 15, 35),
-                PaperKind.Custom, new Size(200, 500), true);
+                DXPaperKind.Custom, new Size(200, 500), true);
         }
 
 
